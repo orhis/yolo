@@ -2,7 +2,7 @@
   YOLO Sign Detection — Sanity Check Report
 ================================================================================
 
-Wygenerowano:               2026-05-10 12:29:59
+Wygenerowano:               2026-05-10 12:49:28
 Model:                      YOLOv8n (pretrained, COCO)
 Hardware:                   NVIDIA GeForce RTX 4070
 PyTorch:                    2.5.1+cu121
@@ -10,8 +10,8 @@ Plik wyjściowy:             F:\Z_projekty\autonomiczne\Proj_zaliczeniowy\result
 
 WYDAJNOŚĆ INFERENCE
 --------------------------------------------------------------------------------
-Średni czas na obraz:       1531.4 ms
-FPS:                        0.7
+Średni czas na obraz:       485.9 ms
+FPS:                        2.1
 Rozdzielczość:              640x480
 Liczba obrazów:             1
 Liczba detekcji:            6
