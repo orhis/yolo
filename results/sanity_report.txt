@@ -1,0 +1,27 @@
+================================================================================
+  YOLO Sign Detection — Sanity Check Report
+================================================================================
+
+Wygenerowano:               2026-05-10 12:29:59
+Model:                      YOLOv8n (pretrained, COCO)
+Hardware:                   NVIDIA GeForce RTX 4070
+PyTorch:                    2.5.1+cu121
+Plik wyjściowy:             F:\Z_projekty\autonomiczne\Proj_zaliczeniowy\results\predictions\sanity\bus.jpg
+
+WYDAJNOŚĆ INFERENCE
+--------------------------------------------------------------------------------
+Średni czas na obraz:       1531.4 ms
+FPS:                        0.7
+Rozdzielczość:              640x480
+Liczba obrazów:             1
+Liczba detekcji:            6
+
+WYKRYTE OBIEKTY
+--------------------------------------------------------------------------------
+  - bus: 1
+  - person: 4
+  - stop sign: 1
+
+RAZEM: 6 obiektów
+
+================================================================================
