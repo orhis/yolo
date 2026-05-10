@@ -2,43 +2,44 @@
   YOLO Sign Detection — Baseline Pretrained Inference
 ================================================================================
 
-Wygenerowano:               2026-05-10 12:52:25
+Wygenerowano:               2026-05-10 13:24:08
 Model:                      YOLOv8n (pretrained, COCO)
-Liczba obrazów:             105
+Liczba obrazów:             125
 Output annotated:           results\predictions\baseline
 
 PRZEGLĄD
 --------------------------------------------------------------------------------
-Obrazów przetworzonych:    105
-Z jakąkolwiek detekcją:    87 (83%)
-Bez detekcji:              18
-Łączna liczba detekcji:    338
-Unikalnych klas COCO:      11
+Obrazów przetworzonych:    125
+Z jakąkolwiek detekcją:    104 (83%)
+Bez detekcji:              21
+Łączna liczba detekcji:    417
+Unikalnych klas COCO:      12
 
 WYKRYTE KLASY (COCO)
 --------------------------------------------------------------------------------
-  car                       203
-  person                    64
-  stop sign                 46
-  truck                     10
-  traffic light             8
-  fire hydrant              2
+  car                       251
+  person                    80
+  stop sign                 48
+  traffic light             14
+  truck                     12
+  fire hydrant              3
+  bus                       3
+  bicycle                   2
   surfboard                 1
   train                     1
-  bicycle                   1
   clock                     1
-  bus                       1
+  kite                      1
 
 PER NASZA KLASA
 --------------------------------------------------------------------------------
   pedestrian_crossing       z detekcją:  29 / 40   ( 72%)
   speed_limit               z detekcją:  24 / 30   ( 80%)
   stop                      z detekcją:  30 / 30   (100%)
-  yield                     z detekcją:   4 / 5    ( 80%)
+  yield                     z detekcją:  21 / 25   ( 84%)
 
 STOP — BASELINE (COCO pretrained)
 --------------------------------------------------------------------------------
-Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 42 obrazach:
+Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 44 obrazach:
   - img_009.jpg
   - img_041.jpg
   - img_042.jpg
@@ -81,10 +82,12 @@ Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 42 obrazach:
   - img_100.jpg
   - img_104.jpg
   - img_105.jpg
+  - img_119.jpg
+  - img_122.jpg
 
 OBRAZY BEZ DETEKCJI (kandydaci do cull)
 --------------------------------------------------------------------------------
-YOLO nie wykrył NICZEGO w 18 obrazach. To prawdopodobnie thumbnaile,
+YOLO nie wykrył NICZEGO w 21 obrazach. To prawdopodobnie thumbnaile,
 crop'y na białym tle, lub bardzo nietypowe ujęcia.
 
   - img_002.jpg [pedestrian_crossing]
@@ -105,6 +108,9 @@ crop'y na białym tle, lub bardzo nietypowe ujęcia.
   - img_096.jpg [speed_limit]
   - img_101.jpg [speed_limit]
   - img_103.jpg [speed_limit]
+  - img_106.jpg [yield]
+  - img_115.jpg [yield]
+  - img_125.jpg [yield]
 
 PER OBRAZ
 --------------------------------------------------------------------------------
@@ -213,5 +219,25 @@ PER OBRAZ
   img_103.jpg    [speed_limit           ] (brak)
   img_104.jpg    [speed_limit           ] person(0.31), stop sign(0.27)
   img_105.jpg    [speed_limit           ] car(0.91), stop sign(0.37), stop sign(0.35), car(0.29), stop sign(0.25)
+  img_106.jpg    [yield                 ] (brak)
+  img_107.jpg    [yield                 ] car(0.69), car(0.48), car(0.30)
+  img_108.jpg    [yield                 ] car(0.84), car(0.68), car(0.56), car(0.39)
+  img_109.jpg    [yield                 ] car(0.86), car(0.64)
+  img_110.jpg    [yield                 ] car(0.77), car(0.63), car(0.33)
+  img_111.jpg    [yield                 ] bus(0.89), fire hydrant(0.46), person(0.26)
+  img_112.jpg    [yield                 ] car(0.58), car(0.58), car(0.47), person(0.44), car(0.44), truck(0.44)
+  img_113.jpg    [yield                 ] car(0.88), car(0.42)
+  img_114.jpg    [yield                 ] car(0.87), car(0.83), car(0.83)
+  img_115.jpg    [yield                 ] (brak)
+  img_116.jpg    [yield                 ] car(0.84), car(0.83), car(0.80), person(0.70), car(0.60), car(0.57), traffic light(0.53), car(0.43), traffic light(0.25)
+  img_117.jpg    [yield                 ] car(0.83), person(0.78), person(0.63), car(0.54), car(0.53), car(0.53), car(0.43), car(0.42), car(0.41), person(0.38), car(0.27), car(0.25)
+  img_118.jpg    [yield                 ] car(0.88), car(0.79), person(0.69), person(0.68), person(0.51), car(0.49)
+  img_119.jpg    [yield                 ] car(0.81), person(0.46), person(0.36), person(0.31), car(0.28), stop sign(0.28), person(0.27), person(0.27), traffic light(0.26)
+  img_120.jpg    [yield                 ] car(0.69), car(0.67), car(0.66), bicycle(0.35)
+  img_121.jpg    [yield                 ] person(0.80), person(0.26)
+  img_122.jpg    [yield                 ] car(0.85), stop sign(0.55)
+  img_123.jpg    [yield                 ] traffic light(0.58), traffic light(0.55), car(0.39), truck(0.35), kite(0.34), traffic light(0.27)
+  img_124.jpg    [yield                 ] bus(0.93), car(0.28), car(0.26)
+  img_125.jpg    [yield                 ] (brak)
 
 ================================================================================

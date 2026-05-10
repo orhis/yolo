@@ -44,6 +44,18 @@ def next_id(dest: Path, prefix: str) -> int:
     return max(nums, default=0) + 1
 
 
+def load_existing(manifest: Path) -> set[tuple[str, str]]:
+    """Zbiór (old_name, note) zaimportowanych już z sukcesem — do deduplikacji."""
+    if not manifest.exists():
+        return set()
+    seen: set[tuple[str, str]] = set()
+    with manifest.open(encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            if row["new_name"] and row["status"] in ("ok", "resized"):
+                seen.add((row["old_name"], row["note"]))
+    return seen
+
+
 def main() -> None:
     args = parse_args()
     if not args.source.exists():
@@ -51,17 +63,23 @@ def main() -> None:
         raise SystemExit(1)
 
     args.dest.mkdir(parents=True, exist_ok=True)
+    manifest_path = args.dest / "_manifest.csv"
+    already = load_existing(manifest_path)
 
-    files = sorted(p for p in args.source.iterdir() if p.is_file() and p.suffix.lower() in EXTENSIONS)
+    all_in_source = sorted(p for p in args.source.iterdir() if p.is_file() and p.suffix.lower() in EXTENSIONS)
+    files = [p for p in all_in_source if (p.name, args.note) not in already]
+    skipped_dedup = len(all_in_source) - len(files)
 
     cn.phase("Import obrazów", f"{args.source} → {args.dest}")
-    cn.kv("Znaleziono plików", len(files))
+    cn.kv("Znaleziono plików", len(all_in_source))
+    cn.kv("Już zaimportowane (skip)", skipped_dedup)
+    cn.kv("Do importu", len(files))
     cn.kv("Notatka", args.note or "(brak)")
     start = next_id(args.dest, args.prefix)
     cn.kv("Numeracja od", f"{args.prefix}{start:03d}.jpg")
 
     if not files:
-        cn.warning("Brak obrazów do importu — wychodzę.")
+        cn.warning("Brak nowych obrazów do importu — wychodzę.")
         return
 
     converted = 0
@@ -104,9 +122,8 @@ def main() -> None:
             rows.append(row)
             prog.advance(task)
 
-    manifest = args.dest / "_manifest.csv"
-    write_header = not manifest.exists()
-    with manifest.open("a", encoding="utf-8", newline="") as f:
+    write_header = not manifest_path.exists()
+    with manifest_path.open("a", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["new_name", "old_name", "size", "note", "status"])
         if write_header:
             writer.writeheader()
@@ -114,11 +131,13 @@ def main() -> None:
 
     cn.console.print()
     cn.console.print(cn.stats_table("Podsumowanie", [
-        ("Znalezione pliki", len(files)),
+        ("Znalezione w źródle", len(all_in_source)),
+        ("Skip (już w manifeście)", skipped_dedup),
+        ("Próbowano zaimportować", len(files)),
         ("Zaimportowane", converted),
         ("Pominięte (błąd)", skipped),
         ("Przeskalowane (>1280px)", resized),
-        ("Manifest", manifest),
+        ("Manifest", manifest_path),
     ]))
     cn.console.print()
     total_in_dest = len(list(args.dest.glob(f"{args.prefix}*.jpg")))
