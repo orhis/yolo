@@ -1,0 +1,39 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.ipynb_checkpoints/
+
+# Data (lokalnie tylko, nie publikujemy ze względu na TOS Google)
+data/raw/
+data/processed/
+data/annotations/
+data/splits/
+*.jpg
+*.jpeg
+*.png
+!presentation/**/*.png
+!presentation/**/*.jpg
+
+# Modele (poza dataset.yaml zostaje w repo)
+models/pretrained/*.pt
+models/trained/*.pt
+
+# Wyniki treningu i predykcji
+runs/
+results/predictions/
+results/runs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
