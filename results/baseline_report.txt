@@ -1,0 +1,169 @@
+================================================================================
+  YOLO Sign Detection — Baseline Pretrained Inference
+================================================================================
+
+Wygenerowano:               2026-05-10 12:43:16
+Model:                      YOLOv8n (pretrained, COCO)
+Liczba obrazów:             75
+Output annotated:           results\predictions\baseline
+
+PRZEGLĄD
+--------------------------------------------------------------------------------
+Obrazów przetworzonych:    75
+Z jakąkolwiek detekcją:    63 (84%)
+Bez detekcji:              12
+Łączna liczba detekcji:    214
+Unikalnych klas COCO:      11
+
+WYKRYTE KLASY (COCO)
+--------------------------------------------------------------------------------
+  car                       106
+  person                    54
+  stop sign                 33
+  truck                     7
+  traffic light             7
+  fire hydrant              2
+  surfboard                 1
+  train                     1
+  bicycle                   1
+  clock                     1
+  bus                       1
+
+PER NASZA KLASA
+--------------------------------------------------------------------------------
+  pedestrian_crossing       z detekcją:  29 / 40   ( 72%)
+  stop                      z detekcją:  30 / 30   (100%)
+  yield                     z detekcją:   4 / 5    ( 80%)
+
+STOP — BASELINE (COCO pretrained)
+--------------------------------------------------------------------------------
+Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 31 obrazach:
+  - img_009.jpg
+  - img_041.jpg
+  - img_042.jpg
+  - img_043.jpg
+  - img_044.jpg
+  - img_045.jpg
+  - img_046.jpg
+  - img_047.jpg
+  - img_048.jpg
+  - img_049.jpg
+  - img_050.jpg
+  - img_051.jpg
+  - img_052.jpg
+  - img_053.jpg
+  - img_054.jpg
+  - img_055.jpg
+  - img_056.jpg
+  - img_057.jpg
+  - img_058.jpg
+  - img_059.jpg
+  - img_060.jpg
+  - img_061.jpg
+  - img_062.jpg
+  - img_063.jpg
+  - img_064.jpg
+  - img_065.jpg
+  - img_066.jpg
+  - img_067.jpg
+  - img_068.jpg
+  - img_069.jpg
+  - img_070.jpg
+
+OBRAZY BEZ DETEKCJI (kandydaci do cull)
+--------------------------------------------------------------------------------
+YOLO nie wykrył NICZEGO w 12 obrazach. To prawdopodobnie thumbnaile,
+crop'y na białym tle, lub bardzo nietypowe ujęcia.
+
+  - img_002.jpg [pedestrian_crossing]
+  - img_003.jpg [pedestrian_crossing]
+  - img_005.jpg [pedestrian_crossing]
+  - img_010.jpg [pedestrian_crossing]
+  - img_011.jpg [pedestrian_crossing]
+  - img_015.jpg [pedestrian_crossing]
+  - img_019.jpg [pedestrian_crossing]
+  - img_020.jpg [pedestrian_crossing]
+  - img_026.jpg [pedestrian_crossing]
+  - img_028.jpg [pedestrian_crossing]
+  - img_030.jpg [pedestrian_crossing]
+  - img_074.jpg [yield]
+
+PER OBRAZ
+--------------------------------------------------------------------------------
+  img_001.jpg    [pedestrian_crossing   ] car(0.43), car(0.37), car(0.28)
+  img_002.jpg    [pedestrian_crossing   ] (brak)
+  img_003.jpg    [pedestrian_crossing   ] (brak)
+  img_004.jpg    [pedestrian_crossing   ] person(0.85), car(0.71), person(0.42), person(0.35), car(0.35)
+  img_005.jpg    [pedestrian_crossing   ] (brak)
+  img_006.jpg    [pedestrian_crossing   ] car(0.82), car(0.65), car(0.57), car(0.41), car(0.40), car(0.36), person(0.34), car(0.33), person(0.33), car(0.32), car(0.32)
+  img_007.jpg    [pedestrian_crossing   ] person(0.82), person(0.77), car(0.63)
+  img_008.jpg    [pedestrian_crossing   ] car(0.86), car(0.83), car(0.81), car(0.62), car(0.61), car(0.41), car(0.35), car(0.34), fire hydrant(0.27)
+  img_009.jpg    [pedestrian_crossing   ] stop sign(0.55)
+  img_010.jpg    [pedestrian_crossing   ] (brak)
+  img_011.jpg    [pedestrian_crossing   ] (brak)
+  img_012.jpg    [pedestrian_crossing   ] car(0.90), car(0.87), car(0.78), person(0.74), car(0.55), car(0.33), truck(0.27)
+  img_013.jpg    [pedestrian_crossing   ] person(0.88), car(0.83), car(0.60), car(0.57), car(0.47), car(0.40), person(0.38), car(0.35), car(0.32), car(0.30)
+  img_014.jpg    [pedestrian_crossing   ] truck(0.59), person(0.59), truck(0.47), car(0.46), car(0.39)
+  img_015.jpg    [pedestrian_crossing   ] (brak)
+  img_016.jpg    [pedestrian_crossing   ] person(0.32)
+  img_017.jpg    [pedestrian_crossing   ] person(0.64), car(0.44), car(0.40)
+  img_018.jpg    [pedestrian_crossing   ] truck(0.66)
+  img_019.jpg    [pedestrian_crossing   ] (brak)
+  img_020.jpg    [pedestrian_crossing   ] (brak)
+  img_021.jpg    [pedestrian_crossing   ] person(0.91), person(0.89), person(0.87), person(0.86), person(0.86), person(0.85), person(0.85), person(0.83), person(0.82), person(0.81), person(0.81), person(0.75), person(0.69), surfboard(0.45)
+  img_022.jpg    [pedestrian_crossing   ] person(0.59), person(0.54), person(0.53), person(0.52), person(0.50), person(0.39), car(0.36), car(0.34), person(0.34)
+  img_023.jpg    [pedestrian_crossing   ] traffic light(0.29)
+  img_024.jpg    [pedestrian_crossing   ] traffic light(0.38)
+  img_025.jpg    [pedestrian_crossing   ] truck(0.40)
+  img_026.jpg    [pedestrian_crossing   ] (brak)
+  img_027.jpg    [pedestrian_crossing   ] car(0.44)
+  img_028.jpg    [pedestrian_crossing   ] (brak)
+  img_029.jpg    [pedestrian_crossing   ] car(0.55)
+  img_030.jpg    [pedestrian_crossing   ] (brak)
+  img_031.jpg    [pedestrian_crossing   ] person(0.81), train(0.37)
+  img_032.jpg    [pedestrian_crossing   ] person(0.91), person(0.90), person(0.87), person(0.86), person(0.83), car(0.58), car(0.56), car(0.56), truck(0.26), car(0.26), car(0.26)
+  img_033.jpg    [pedestrian_crossing   ] person(0.49)
+  img_034.jpg    [pedestrian_crossing   ] car(0.83), car(0.74), car(0.65), car(0.63), car(0.51), car(0.45), car(0.42), car(0.41), car(0.34), car(0.33), car(0.30), car(0.30), car(0.28), car(0.27)
+  img_035.jpg    [pedestrian_crossing   ] person(0.83), car(0.34), car(0.29), person(0.27)
+  img_036.jpg    [pedestrian_crossing   ] person(0.71), person(0.52), bicycle(0.46), car(0.41), car(0.39), person(0.39), car(0.36), car(0.36), car(0.30), car(0.30)
+  img_037.jpg    [pedestrian_crossing   ] car(0.73), car(0.69), car(0.39), traffic light(0.28)
+  img_038.jpg    [pedestrian_crossing   ] fire hydrant(0.82), car(0.72), person(0.62), person(0.61), traffic light(0.43), person(0.29)
+  img_039.jpg    [pedestrian_crossing   ] car(0.43)
+  img_040.jpg    [pedestrian_crossing   ] clock(0.30)
+  img_041.jpg    [stop                  ] stop sign(0.91)
+  img_042.jpg    [stop                  ] stop sign(0.91)
+  img_043.jpg    [stop                  ] stop sign(0.96)
+  img_044.jpg    [stop                  ] stop sign(0.94), car(0.90), car(0.83), traffic light(0.63), car(0.44), car(0.29)
+  img_045.jpg    [stop                  ] stop sign(0.93), car(0.79), car(0.65), car(0.51), car(0.44), car(0.43), car(0.41), car(0.25)
+  img_046.jpg    [stop                  ] stop sign(0.92)
+  img_047.jpg    [stop                  ] stop sign(0.83), bus(0.81)
+  img_048.jpg    [stop                  ] stop sign(0.94)
+  img_049.jpg    [stop                  ] stop sign(0.58)
+  img_050.jpg    [stop                  ] stop sign(0.83), stop sign(0.35)
+  img_051.jpg    [stop                  ] stop sign(0.44)
+  img_052.jpg    [stop                  ] stop sign(0.95)
+  img_053.jpg    [stop                  ] stop sign(0.92)
+  img_054.jpg    [stop                  ] car(0.53), stop sign(0.47), car(0.25)
+  img_055.jpg    [stop                  ] stop sign(0.61), truck(0.31)
+  img_056.jpg    [stop                  ] stop sign(0.93)
+  img_057.jpg    [stop                  ] car(0.75), stop sign(0.55)
+  img_058.jpg    [stop                  ] stop sign(0.94), car(0.41)
+  img_059.jpg    [stop                  ] stop sign(0.97), car(0.89), car(0.82), car(0.62)
+  img_060.jpg    [stop                  ] stop sign(0.96)
+  img_061.jpg    [stop                  ] stop sign(0.95)
+  img_062.jpg    [stop                  ] stop sign(0.94)
+  img_063.jpg    [stop                  ] stop sign(0.46)
+  img_064.jpg    [stop                  ] stop sign(0.96)
+  img_065.jpg    [stop                  ] stop sign(0.96)
+  img_066.jpg    [stop                  ] stop sign(0.57), traffic light(0.47), car(0.27)
+  img_067.jpg    [stop                  ] stop sign(0.89)
+  img_068.jpg    [stop                  ] stop sign(0.93), person(0.26)
+  img_069.jpg    [stop                  ] stop sign(0.97)
+  img_070.jpg    [stop                  ] stop sign(0.94), stop sign(0.92), car(0.81), car(0.65), car(0.64), car(0.58), car(0.28), car(0.27), car(0.27)
+  img_071.jpg    [yield                 ] person(0.64), person(0.55), person(0.36), car(0.35), person(0.35)
+  img_072.jpg    [yield                 ] traffic light(0.36)
+  img_073.jpg    [yield                 ] car(0.73), car(0.73), car(0.64)
+  img_074.jpg    [yield                 ] (brak)
+  img_075.jpg    [yield                 ] person(0.49)
+
+================================================================================
