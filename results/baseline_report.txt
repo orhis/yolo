@@ -2,26 +2,26 @@
   YOLO Sign Detection — Baseline Pretrained Inference
 ================================================================================
 
-Wygenerowano:               2026-05-10 12:43:16
+Wygenerowano:               2026-05-10 12:52:25
 Model:                      YOLOv8n (pretrained, COCO)
-Liczba obrazów:             75
+Liczba obrazów:             105
 Output annotated:           results\predictions\baseline
 
 PRZEGLĄD
 --------------------------------------------------------------------------------
-Obrazów przetworzonych:    75
-Z jakąkolwiek detekcją:    63 (84%)
-Bez detekcji:              12
-Łączna liczba detekcji:    214
+Obrazów przetworzonych:    105
+Z jakąkolwiek detekcją:    87 (83%)
+Bez detekcji:              18
+Łączna liczba detekcji:    338
 Unikalnych klas COCO:      11
 
 WYKRYTE KLASY (COCO)
 --------------------------------------------------------------------------------
-  car                       106
-  person                    54
-  stop sign                 33
-  truck                     7
-  traffic light             7
+  car                       203
+  person                    64
+  stop sign                 46
+  truck                     10
+  traffic light             8
   fire hydrant              2
   surfboard                 1
   train                     1
@@ -32,12 +32,13 @@ WYKRYTE KLASY (COCO)
 PER NASZA KLASA
 --------------------------------------------------------------------------------
   pedestrian_crossing       z detekcją:  29 / 40   ( 72%)
+  speed_limit               z detekcją:  24 / 30   ( 80%)
   stop                      z detekcją:  30 / 30   (100%)
   yield                     z detekcją:   4 / 5    ( 80%)
 
 STOP — BASELINE (COCO pretrained)
 --------------------------------------------------------------------------------
-Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 31 obrazach:
+Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 42 obrazach:
   - img_009.jpg
   - img_041.jpg
   - img_042.jpg
@@ -69,10 +70,21 @@ Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 31 obrazach:
   - img_068.jpg
   - img_069.jpg
   - img_070.jpg
+  - img_079.jpg
+  - img_081.jpg
+  - img_083.jpg
+  - img_088.jpg
+  - img_089.jpg
+  - img_093.jpg
+  - img_095.jpg
+  - img_099.jpg
+  - img_100.jpg
+  - img_104.jpg
+  - img_105.jpg
 
 OBRAZY BEZ DETEKCJI (kandydaci do cull)
 --------------------------------------------------------------------------------
-YOLO nie wykrył NICZEGO w 12 obrazach. To prawdopodobnie thumbnaile,
+YOLO nie wykrył NICZEGO w 18 obrazach. To prawdopodobnie thumbnaile,
 crop'y na białym tle, lub bardzo nietypowe ujęcia.
 
   - img_002.jpg [pedestrian_crossing]
@@ -87,6 +99,12 @@ crop'y na białym tle, lub bardzo nietypowe ujęcia.
   - img_028.jpg [pedestrian_crossing]
   - img_030.jpg [pedestrian_crossing]
   - img_074.jpg [yield]
+  - img_077.jpg [speed_limit]
+  - img_086.jpg [speed_limit]
+  - img_091.jpg [speed_limit]
+  - img_096.jpg [speed_limit]
+  - img_101.jpg [speed_limit]
+  - img_103.jpg [speed_limit]
 
 PER OBRAZ
 --------------------------------------------------------------------------------
@@ -165,5 +183,35 @@ PER OBRAZ
   img_073.jpg    [yield                 ] car(0.73), car(0.73), car(0.64)
   img_074.jpg    [yield                 ] (brak)
   img_075.jpg    [yield                 ] person(0.49)
+  img_076.jpg    [speed_limit           ] car(0.94), car(0.80), car(0.64), car(0.42)
+  img_077.jpg    [speed_limit           ] (brak)
+  img_078.jpg    [speed_limit           ] car(0.84), truck(0.77)
+  img_079.jpg    [speed_limit           ] car(0.53), stop sign(0.28)
+  img_080.jpg    [speed_limit           ] car(0.26)
+  img_081.jpg    [speed_limit           ] car(0.82), car(0.78), stop sign(0.28)
+  img_082.jpg    [speed_limit           ] truck(0.54)
+  img_083.jpg    [speed_limit           ] car(0.85), car(0.71), car(0.65), car(0.61), car(0.33), stop sign(0.32), car(0.26)
+  img_084.jpg    [speed_limit           ] car(0.79), car(0.79), car(0.73), car(0.62), car(0.46), car(0.44), car(0.40), car(0.35), car(0.32), person(0.32), car(0.32), car(0.31), car(0.29), car(0.27)
+  img_085.jpg    [speed_limit           ] person(0.85), person(0.49), person(0.35), traffic light(0.28)
+  img_086.jpg    [speed_limit           ] (brak)
+  img_087.jpg    [speed_limit           ] car(0.82), car(0.58), car(0.49), car(0.39)
+  img_088.jpg    [speed_limit           ] car(0.51), car(0.51), car(0.39), car(0.38), car(0.31), stop sign(0.30)
+  img_089.jpg    [speed_limit           ] car(0.89), car(0.78), car(0.71), car(0.68), stop sign(0.64), car(0.47)
+  img_090.jpg    [speed_limit           ] car(0.65), car(0.58), car(0.53), car(0.49), car(0.48), car(0.40), car(0.39), car(0.37), car(0.37), car(0.36), car(0.35), car(0.35), car(0.33), car(0.32), car(0.26)
+  img_091.jpg    [speed_limit           ] (brak)
+  img_092.jpg    [speed_limit           ] car(0.92), car(0.89), car(0.80), car(0.78), car(0.77), person(0.76), car(0.56), car(0.43)
+  img_093.jpg    [speed_limit           ] person(0.59), car(0.43), car(0.33), stop sign(0.29)
+  img_094.jpg    [speed_limit           ] car(0.82), car(0.31)
+  img_095.jpg    [speed_limit           ] stop sign(0.69), car(0.44), truck(0.43)
+  img_096.jpg    [speed_limit           ] (brak)
+  img_097.jpg    [speed_limit           ] car(0.89), person(0.85), person(0.30)
+  img_098.jpg    [speed_limit           ] person(0.79), car(0.73), car(0.70)
+  img_099.jpg    [speed_limit           ] car(0.90), stop sign(0.33)
+  img_100.jpg    [speed_limit           ] car(0.93), car(0.92), car(0.59), stop sign(0.58), car(0.53), car(0.49), car(0.46), car(0.41), car(0.40)
+  img_101.jpg    [speed_limit           ] (brak)
+  img_102.jpg    [speed_limit           ] car(0.90), car(0.87), car(0.86), car(0.84), car(0.77), car(0.63), car(0.59), car(0.50), car(0.45), car(0.31), car(0.28), car(0.28), car(0.27), car(0.26)
+  img_103.jpg    [speed_limit           ] (brak)
+  img_104.jpg    [speed_limit           ] person(0.31), stop sign(0.27)
+  img_105.jpg    [speed_limit           ] car(0.91), stop sign(0.37), stop sign(0.35), car(0.29), stop sign(0.25)
 
 ================================================================================
