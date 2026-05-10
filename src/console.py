@@ -10,8 +10,18 @@ Użycie:
     success("Gotowe")
 """
 
+import sys
 from contextlib import contextmanager
 from typing import Iterator
+
+# Windows konsola domyślnie używa cp1250 → wywala się na znakach typu →, ✓.
+# Wymuszamy UTF-8 zanim rich napisze cokolwiek.
+if sys.platform == "win32":
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8")
+        except (AttributeError, OSError):
+            pass
 
 from rich.console import Console
 from rich.panel import Panel
