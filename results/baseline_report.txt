@@ -2,36 +2,40 @@
   YOLO Sign Detection — Baseline Pretrained Inference
 ================================================================================
 
-Wygenerowano:               2026-05-10 13:24:08
+Wygenerowano:               2026-05-10 13:46:37
 Model:                      YOLOv8n (pretrained, COCO)
-Liczba obrazów:             125
+Liczba obrazów:             150
 Output annotated:           results\predictions\baseline
 
 PRZEGLĄD
 --------------------------------------------------------------------------------
-Obrazów przetworzonych:    125
-Z jakąkolwiek detekcją:    104 (83%)
+Obrazów przetworzonych:    150
+Z jakąkolwiek detekcją:    129 (86%)
 Bez detekcji:              21
-Łączna liczba detekcji:    417
-Unikalnych klas COCO:      12
+Łączna liczba detekcji:    642
+Unikalnych klas COCO:      15
 
 WYKRYTE KLASY (COCO)
 --------------------------------------------------------------------------------
-  car                       251
-  person                    80
-  stop sign                 48
-  traffic light             14
-  truck                     12
-  fire hydrant              3
+  car                       370
+  person                    143
+  stop sign                 62
+  bicycle                   19
+  truck                     15
+  traffic light             15
+  fire hydrant              5
+  clock                     3
   bus                       3
-  bicycle                   2
+  bench                     2
   surfboard                 1
   train                     1
-  clock                     1
   kite                      1
+  motorcycle                1
+  potted plant              1
 
 PER NASZA KLASA
 --------------------------------------------------------------------------------
+  no_entry                  z detekcją:  25 / 25   (100%)
   pedestrian_crossing       z detekcją:  29 / 40   ( 72%)
   speed_limit               z detekcją:  24 / 30   ( 80%)
   stop                      z detekcją:  30 / 30   (100%)
@@ -39,7 +43,7 @@ PER NASZA KLASA
 
 STOP — BASELINE (COCO pretrained)
 --------------------------------------------------------------------------------
-Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 44 obrazach:
+Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 57 obrazach:
   - img_009.jpg
   - img_041.jpg
   - img_042.jpg
@@ -84,6 +88,19 @@ Pretrained YOLOv8n zna 'stop sign' z COCO. Wykrył w 44 obrazach:
   - img_105.jpg
   - img_119.jpg
   - img_122.jpg
+  - img_126.jpg
+  - img_127.jpg
+  - img_130.jpg
+  - img_131.jpg
+  - img_132.jpg
+  - img_134.jpg
+  - img_136.jpg
+  - img_138.jpg
+  - img_139.jpg
+  - img_140.jpg
+  - img_142.jpg
+  - img_143.jpg
+  - img_148.jpg
 
 OBRAZY BEZ DETEKCJI (kandydaci do cull)
 --------------------------------------------------------------------------------
@@ -239,5 +256,30 @@ PER OBRAZ
   img_123.jpg    [yield                 ] traffic light(0.58), traffic light(0.55), car(0.39), truck(0.35), kite(0.34), traffic light(0.27)
   img_124.jpg    [yield                 ] bus(0.93), car(0.28), car(0.26)
   img_125.jpg    [yield                 ] (brak)
+  img_126.jpg    [no_entry              ] person(0.64), person(0.61), stop sign(0.61), person(0.27)
+  img_127.jpg    [no_entry              ] car(0.89), car(0.89), car(0.81), car(0.80), car(0.73), car(0.61), stop sign(0.46), car(0.33), bicycle(0.32)
+  img_128.jpg    [no_entry              ] car(0.93), car(0.90), car(0.87), car(0.85), car(0.77), person(0.75), car(0.74), car(0.66), bicycle(0.65), person(0.62), car(0.58), motorcycle(0.44), person(0.34), bicycle(0.34), car(0.32), car(0.31), car(0.29), car(0.27), car(0.26), person(0.25)
+  img_129.jpg    [no_entry              ] car(0.94), car(0.93), car(0.88), car(0.87), car(0.85), car(0.77), car(0.68), car(0.50), car(0.37), car(0.35)
+  img_130.jpg    [no_entry              ] stop sign(0.80), car(0.72), bicycle(0.37), car(0.32), car(0.29)
+  img_131.jpg    [no_entry              ] stop sign(0.82), car(0.72), car(0.48), bicycle(0.48), bicycle(0.46), car(0.43), bicycle(0.41), bicycle(0.34), car(0.33), bicycle(0.29), bicycle(0.27), car(0.27), car(0.25)
+  img_132.jpg    [no_entry              ] car(0.85), car(0.72), car(0.71), stop sign(0.57), car(0.48), car(0.43), bicycle(0.39), car(0.33), car(0.29)
+  img_133.jpg    [no_entry              ] car(0.86), car(0.83), person(0.82), car(0.78), person(0.77), person(0.69), person(0.66), car(0.46), bicycle(0.37), car(0.36)
+  img_134.jpg    [no_entry              ] car(0.80), person(0.66), car(0.58), car(0.56), car(0.52), car(0.39), bicycle(0.30), person(0.29), stop sign(0.29), clock(0.29)
+  img_135.jpg    [no_entry              ] car(0.66), car(0.53), person(0.47), bicycle(0.38)
+  img_136.jpg    [no_entry              ] person(0.73), car(0.50), car(0.46), car(0.36), stop sign(0.33), car(0.30), car(0.29), car(0.29)
+  img_137.jpg    [no_entry              ] car(0.81), person(0.79), car(0.72), car(0.68), car(0.66), person(0.64), car(0.55), car(0.28), traffic light(0.25)
+  img_138.jpg    [no_entry              ] car(0.78), car(0.64), person(0.63), car(0.52), stop sign(0.44), stop sign(0.42), person(0.39), truck(0.37), car(0.35)
+  img_139.jpg    [no_entry              ] car(0.69), car(0.55), stop sign(0.43), truck(0.29), person(0.29), car(0.26)
+  img_140.jpg    [no_entry              ] stop sign(0.79), person(0.37), person(0.36), person(0.33)
+  img_141.jpg    [no_entry              ] person(0.54), bicycle(0.32), person(0.27)
+  img_142.jpg    [no_entry              ] car(0.85), person(0.77), stop sign(0.59), car(0.57), car(0.47), truck(0.47), car(0.39), car(0.34), car(0.29), car(0.29), bicycle(0.26), car(0.25), car(0.25)
+  img_143.jpg    [no_entry              ] car(0.91), car(0.86), car(0.85), car(0.74), person(0.70), stop sign(0.70), person(0.66), car(0.52), car(0.51), person(0.31)
+  img_144.jpg    [no_entry              ] person(0.77), car(0.74), person(0.71), car(0.60), car(0.55), car(0.53), car(0.46)
+  img_145.jpg    [no_entry              ] person(0.81), person(0.73), person(0.48), person(0.38), person(0.36)
+  img_146.jpg    [no_entry              ] person(0.59), person(0.55), car(0.55), car(0.47), person(0.43), car(0.35), car(0.30), person(0.27)
+  img_147.jpg    [no_entry              ] person(0.80), person(0.79), person(0.76), car(0.55), person(0.50), potted plant(0.36), person(0.36), car(0.28), car(0.27)
+  img_148.jpg    [no_entry              ] person(0.89), person(0.77), person(0.75), person(0.74), fire hydrant(0.67), car(0.51), bicycle(0.46), stop sign(0.30)
+  img_149.jpg    [no_entry              ] car(0.91), bench(0.49), bench(0.32), clock(0.30), car(0.30)
+  img_150.jpg    [no_entry              ] person(0.63), car(0.60), car(0.60), person(0.59), person(0.56), person(0.53), person(0.51), person(0.50), car(0.49), car(0.43), person(0.41), person(0.39), person(0.38), fire hydrant(0.36), person(0.34), car(0.34), car(0.33), car(0.33), person(0.32), car(0.31), car(0.31), person(0.30), person(0.28), car(0.27), car(0.26), car(0.26), person(0.26)
 
 ================================================================================
